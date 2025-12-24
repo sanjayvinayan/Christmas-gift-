@@ -4,16 +4,44 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Merry Christmas! 🎄</title>
     <style>
-        body { margin: 0; background: #ffffff; color: #333; font-family: 'Arial', sans-serif; overflow-x: hidden; text-align: center; }
+        /* This part centers everything perfectly */
+        body, html { 
+            height: 100%; 
+            margin: 0; 
+            background: #ffffff; 
+            display: flex; 
+            justify-content: center; 
+            align-items: center; 
+            font-family: 'Arial', sans-serif; 
+            overflow: hidden; 
+            text-align: center; 
+        }
+        
         #snow-canvas { position: absolute; top: 0; left: 0; pointer-events: none; z-index: 1; }
-        .card { position: relative; z-index: 2; background: rgba(255, 255, 255, 0.9); padding: 30px; border-radius: 20px; box-shadow: 0 10px 30px rgba(0,0,0,0.1); margin: 50px auto; max-width: 80%; border: 2px solid #ff4d4d; }
-        .btn { background: #ff4d4d; color: white; border: none; padding: 15px 30px; border-radius: 50px; font-size: 18px; cursor: pointer; transition: 0.3s; margin-top: 20px; box-shadow: 0 4px 15px rgba(255,77,77,0.3); }
-        .btn:hover { transform: scale(1.05); background: #e63939; }
-        #gift-content { display: none; animation: fadeIn 2s; }
-        .countdown { font-size: 20px; color: #ff4d4d; font-weight: bold; margin-bottom: 20px; }
-        @keyframes fadeIn { from { opacity: 0; } to { opacity: 1; } }
-        h1 { color: #d42424; }
-        p { line-height: 1.6; font-size: 16px; }
+        
+        .card { 
+            position: relative; 
+            z-index: 2; 
+            background: rgba(255, 255, 255, 0.95); 
+            padding: 40px 25px; 
+            border-radius: 25px; 
+            box-shadow: 0 15px 35px rgba(0,0,0,0.1); 
+            max-width: 85%; 
+            border: 2px solid #ff4d4d;
+            animation: fadeIn 1.5s ease-in-out;
+        }
+
+        .btn { background: #ff4d4d; color: white; border: none; padding: 15px 30px; border-radius: 50px; font-size: 18px; cursor: pointer; transition: 0.3s; margin-top: 25px; box-shadow: 0 4px 15px rgba(255,77,77,0.3); font-weight: bold; }
+        .btn:hover { transform: scale(1.1); background: #e63939; }
+        
+        #gift-content { display: none; }
+        .countdown { font-size: 18px; color: #ff4d4d; font-weight: bold; margin-bottom: 20px; letter-spacing: 1px; }
+        
+        @keyframes fadeIn { from { opacity: 0; transform: translateY(20px); } to { opacity: 1; transform: translateY(0); } }
+        
+        h1 { color: #d42424; font-size: 26px; margin-bottom: 15px; }
+        p { line-height: 1.8; font-size: 17px; color: #444; font-style: italic; }
+        strong { color: #d42424; font-size: 20px; }
     </style>
 </head>
 <body>
